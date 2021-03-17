@@ -1,0 +1,18 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr app-table-details
+        *ngFor="let user of users"
+        [id]="user.id"
+        [username]="user.username"
+        [mail]="user.mail"
+        [ngStyle]="{color: getColor(user.id)}" >
+      </tr>
+  </tbody>
+</table>
